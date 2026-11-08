@@ -1,0 +1,4 @@
+#!/bin/sh
+# Entry point of the AppImage: just starts the bundled (self-contained) app.
+HERE="$(dirname "$(readlink -f "$0")")"
+exec "$HERE/usr/bin/CCMerger" "$@"

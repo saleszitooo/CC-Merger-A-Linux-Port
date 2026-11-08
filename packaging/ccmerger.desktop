@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=CCMerger
+Comment=Merge Sims 2 custom content package files
+Exec=CCMerger
+Icon=ccmerger
+Categories=Utility;
+Terminal=false

@@ -1,0 +1,6 @@
+build/
+dist/
+.dotnet/
+bin/
+obj/
+__pycache__/

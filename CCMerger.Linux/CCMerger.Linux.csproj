@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+
+    <!-- The executable is called "CCMerger" (the Windows build is CCMerger.exe) -->
+    <AssemblyName>CCMerger</AssemblyName>
+    <RootNamespace>CCMerger</RootNamespace>
+    <Version>1.4.1</Version>
+    <Product>CCMerger</Product>
+    <Authors>Lazy Duchess</Authors>
+
+    <!-- We don't do any culture specific work, so we skip the libicu dependency.
+         This makes the AppImage work on distros that don't ship ICU. -->
+    <InvariantGlobalization>true</InvariantGlobalization>
+
+    <!-- Avalonia + reflection don't like trimming; keep the whole thing. -->
+    <PublishTrimmed>false</PublishTrimmed>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.0" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Window icon, loaded as avares://CCMerger/Assets/ccmerger.png -->
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+
+</Project>
